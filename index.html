@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Meus Flashcards</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cartao{
+    width: 200px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.cartao-interno{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.cartao:hover .cartao-interno{
+    transform: rotateY(180deg);
+}
+
+.cartao-frente,
+.cartao-verso{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.cartao-frente{
+    background: #4CAF50;
+    color: white;
+}
+
+.cartao-verso{
+    background: #2196F3;
+    color: white;
+    transform: rotateY(180deg);
+}
+</style>
+</head>
+
+<body>
+
+<div class="cartao">
+    <div class="cartao-interno">
+        <div class="cartao-frente">
+            O que é HTML?
+        </div>
+        <div class="cartao-verso">
+            HTML é a linguagem de estruturação das páginas web.
+        </div>
+    </div>
+</div>
+
+<div class="cartao">
+    <div class="cartao-interno">
+        <div class="cartao-frente">
+            O que é CSS?
+        </div>
+        <div class="cartao-verso">
+            CSS é usado para estilizar páginas web.
+        </div>
+    </div>
+</div>
+
+<div class="cartao">
+    <div class="cartao-interno">
+        <div class="cartao-frente">
+            O que é JavaScript?
+        </div>
+        <div class="cartao-verso">
+            JavaScript adiciona interatividade aos sites.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
